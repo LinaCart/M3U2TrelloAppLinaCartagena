@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Uvapp</title>
+</head>
+
+<body>
+    <nav class="navbar bg-success p-2 text-dark bg-opacity-10">
+        <div class="container-fluid">
+            <a class="navbar-brand">Uvapp</a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <button type="button" class="btn btn-success mx-3 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Nueva Tarea</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nueva Tarea</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Titulo:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Responsable:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Descripcion:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Fecha:</label>
+                    <input type="date" class="form-control" id="message-text"></input>
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Crear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col bg-light m-3">
+                <h3>Todo</h3>
+                <div id="todo-container"></div>
+            </div>
+            <div class="col bg-light m-3">
+                <h3>In progres</h3>
+                <div id="in-progres-container"></div>
+            </div>
+            <div class="col bg-light m-3">
+                <h3>Done</h3>
+                <div id="done-container"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
